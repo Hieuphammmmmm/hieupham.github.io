@@ -1,19 +1,20 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hieu Pham | Astronergy Contact</title>
+<title>Hieu Pham | Astronergy Digital Business Card</title>
 
 <style>
 :root {
-  --green: #2BB673;        /* Astronergy Green */
+  --green: #2BB673;        /* Astronergy primary green */
   --green-dark: #1F8F5F;
-  --bg: #F5FBF8;
-  --card: #FFFFFF;
+  --bg-light: #E8F5EE;
+  --bg: #F4FBF8;
+  --card: #F9FEFB;
   --text: #1F2937;
-  --muted: #6B7280;
-  --border: #E5E7EB;
+  --muted: #5F6F6B;
+  --border: #DCEFE6;
 }
 
 * {
@@ -22,14 +23,14 @@
 
 body {
   margin: 0;
-  background: var(--bg);
+  min-height: 100vh;
+  background: linear-gradient(180deg, var(--bg-light), var(--bg));
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
                Roboto, Helvetica, Arial, sans-serif;
   color: var(--text);
-  min-height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   padding: 24px;
 }
 
@@ -37,16 +38,16 @@ body {
   width: 100%;
   max-width: 420px;
   background: var(--card);
-  border-radius: 18px;
+  border-radius: 20px;
   border: 1px solid var(--border);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+  box-shadow: 0 24px 48px rgba(43,182,115,0.15);
   overflow: hidden;
 }
 
 /* HEADER */
 .header {
-  padding: 28px 24px 20px;
   text-align: center;
+  padding: 32px 24px 22px;
 }
 
 .avatar {
@@ -56,6 +57,7 @@ body {
   object-fit: cover;
   border: 3px solid var(--green);
   margin-bottom: 14px;
+  background: #fff;
 }
 
 .name {
@@ -65,10 +67,10 @@ body {
 }
 
 .role {
+  margin-top: 8px;
   font-size: 14px;
+  line-height: 1.6;
   color: var(--muted);
-  margin-top: 6px;
-  line-height: 1.5;
 }
 
 /* DIVIDER */
@@ -93,25 +95,26 @@ body {
   border-radius: 12px;
   font-size: 15px;
   font-weight: 600;
+  background: #fff;
   border: 1px solid var(--border);
   color: var(--text);
-  background: #fff;
   transition: all 0.2s ease;
 }
 
 .actions a span {
-  color: var(--muted);
+  font-size: 13px;
   font-weight: 500;
+  color: var(--muted);
 }
 
 .actions a.primary {
   background: var(--green);
-  color: #fff;
   border-color: var(--green);
+  color: #fff;
 }
 
 .actions a.primary span {
-  color: #E8FFF4;
+  color: #E9FFF4;
 }
 
 .actions a:hover {
@@ -134,11 +137,11 @@ body {
 <div class="card">
 
   <div class="header">
-    <img src="avatar.jpg" alt="Avatar" class="avatar">
+    <img src="avatar.jpg" alt="Hieu Pham" class="avatar">
     <h1 class="name">Hieu Pham</h1>
     <div class="role">
-      Business Development<br>
-      Astronergy – CHINT Group
+      Country Manager, Vietnam<br>
+      ASTRONERGY NEW ENERGY TECHNOLOGY (SINGAPORE) PTE. LTD.
     </div>
   </div>
 
@@ -150,19 +153,19 @@ body {
       <span>vCard</span>
     </a>
 
-    <a href="tel:+849xxxxxxxx">
+    <a href="tel:+84366949618">
       📞 Phone
-      <span>Call now</span>
+      <span>+84 366 949 618</span>
     </a>
 
-    <a href="mailto:hieu@email.com">
+    <a href="mailto:hieupham@astronergy.com">
       ✉ Email
-      <span>Send mail</span>
+      <span>hieupham@astronergy.com</span>
     </a>
 
-    <a href="https://zalo.me/849xxxxxxxx">
-      💬 Zalo
-      <span>Chat</span>
+    <a href="https://www.astronergy.com" target="_blank">
+      🌐 Website
+      <span>astronergy.com</span>
     </a>
 
     <a href="https://www.linkedin.com/in/hieupham" target="_blank">
@@ -172,7 +175,7 @@ body {
   </div>
 
   <div class="footer">
-    Digital Business Card • Powered by Astronergy
+    Official Digital Business Card • Astronergy
   </div>
 
 </div>
