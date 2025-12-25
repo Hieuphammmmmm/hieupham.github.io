@@ -3,14 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hieu Pham | Digital Contact</title>
+<title>Hieu Pham | Astronergy Contact</title>
 
 <style>
 :root {
-  --primary: #2BB673;   /* Astronergy Green */
-  --bg: #F4FBF8;
+  --green: #2BB673;        /* Astronergy Green */
+  --green-dark: #1F8F5F;
+  --bg: #F5FBF8;
+  --card: #FFFFFF;
   --text: #1F2937;
-  --subtext: #4B5563;
+  --muted: #6B7280;
+  --border: #E5E7EB;
 }
 
 * {
@@ -19,86 +22,109 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-  background: linear-gradient(180deg, #eaf0f8, #f9fafb);
+  background: var(--bg);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+               Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text);
   min-height: 100vh;
   display: flex;
-  align-items: center;
   justify-content: center;
-  padding: 20px;
+  align-items: center;
+  padding: 24px;
 }
 
 .card {
-  background: #ffffff;
   width: 100%;
-  max-width: 380px;
-  border-radius: 22px;
-  padding: 28px 24px 30px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  max-width: 420px;
+  background: var(--card);
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+  overflow: hidden;
+}
+
+/* HEADER */
+.header {
+  padding: 28px 24px 20px;
   text-align: center;
 }
 
 .avatar {
-  width: 110px;
-  height: 110px;
+  width: 96px;
+  height: 96px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid #fff;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-  margin-top: -80px;
-  background: #fff;
+  border: 3px solid var(--green);
+  margin-bottom: 14px;
 }
 
-h1 {
+.name {
   font-size: 22px;
-  margin: 16px 0 6px;
-  color: var(--text);
+  font-weight: 700;
+  margin: 0;
 }
 
 .role {
   font-size: 14px;
-  color: var(--subtext);
+  color: var(--muted);
+  margin-top: 6px;
   line-height: 1.5;
-  margin-bottom: 22px;
+}
+
+/* DIVIDER */
+.divider {
+  height: 1px;
+  background: var(--border);
+  margin: 0 24px;
+}
+
+/* ACTIONS */
+.actions {
+  padding: 22px 24px 26px;
 }
 
 .actions a {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 10px;
+  justify-content: space-between;
   text-decoration: none;
-  font-weight: 600;
-  padding: 14px;
+  padding: 14px 16px;
   margin-bottom: 12px;
-  border-radius: 14px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  border: 1px solid var(--border);
+  color: var(--text);
+  background: #fff;
   transition: all 0.2s ease;
 }
 
+.actions a span {
+  color: var(--muted);
+  font-weight: 500;
+}
+
 .actions a.primary {
-  background: var(--primary);
+  background: var(--green);
   color: #fff;
+  border-color: var(--green);
 }
 
-.actions a.secondary {
-  background: #f1f5f9;
-  color: var(--text);
-}
-
-.actions a.linkedin {
-  background: #0A66C2;
-  color: #fff;
+.actions a.primary span {
+  color: #E8FFF4;
 }
 
 .actions a:hover {
   transform: translateY(-1px);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
 }
 
+/* FOOTER */
 .footer {
-  margin-top: 18px;
+  text-align: center;
+  padding: 14px 16px 20px;
   font-size: 12px;
-  color: #9ca3af;
+  color: #9CA3AF;
 }
 </style>
 </head>
@@ -106,27 +132,49 @@ h1 {
 <body>
 
 <div class="card">
-  <img src="avatar.jpg" alt="Avatar" class="avatar">
 
-  <h1>Hieu Pham</h1>
-  <div class="role">
-    Business Development<br>
-    Your Company Name
+  <div class="header">
+    <img src="avatar.jpg" alt="Avatar" class="avatar">
+    <h1 class="name">Hieu Pham</h1>
+    <div class="role">
+      Business Development<br>
+      Astronergy – CHINT Group
+    </div>
   </div>
 
+  <div class="divider"></div>
+
   <div class="actions">
-    <a class="primary" href="contact.vcf">⬇ Save Contact</a>
-    <a class="secondary" href="tel:+84366949618">📞 Call</a>
-    <a class="secondary" href="mailto:Hieupham@astronergy.com">✉ Email</a>
-    <a class="secondary" href="https://zalo.me/84366949618">💬 Zalo</a>
-    <a class="linkedin" href="https://www.linkedin.com/in/hieu-pham-trung-10b23413b/" target="_blank">
+    <a class="primary" href="contact.vcf">
+      ⬇ Save Contact
+      <span>vCard</span>
+    </a>
+
+    <a href="tel:+849xxxxxxxx">
+      📞 Phone
+      <span>Call now</span>
+    </a>
+
+    <a href="mailto:hieu@email.com">
+      ✉ Email
+      <span>Send mail</span>
+    </a>
+
+    <a href="https://zalo.me/849xxxxxxxx">
+      💬 Zalo
+      <span>Chat</span>
+    </a>
+
+    <a href="https://www.linkedin.com/in/hieupham" target="_blank">
       🔗 LinkedIn
+      <span>Profile</span>
     </a>
   </div>
 
   <div class="footer">
-    Scan QR • Digital Business Card
+    Digital Business Card • Powered by Astronergy
   </div>
+
 </div>
 
 </body>
